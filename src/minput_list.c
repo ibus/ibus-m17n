@@ -1,4 +1,7 @@
 /* replacement of minput_list, which is available in m17n-lib 1.6.2+ (CVS) */
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
 #include <m17n.h>
 

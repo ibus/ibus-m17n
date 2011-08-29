@@ -1,4 +1,7 @@
 /* vim:set et sts=4: */
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
 #include <ibus.h>
 #include <locale.h>
