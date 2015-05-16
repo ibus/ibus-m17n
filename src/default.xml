@@ -342,10 +342,14 @@
 		<name>m17n:ja:anthy</name>
 		<symbol>あ</symbol>
 	</engine>
-	<engine>
-		<name>m17n:kk:*</name>
-		<symbol>قا</symbol>
-	</engine>
+         <engine>
+                <name>m17n:kk:*</name>
+                <symbol>kk</symbol>
+        </engine>
+        <engine>
+                <name>m17n:kk:arabic</name>
+                <symbol>قا</symbol>
+        </engine>
 	<engine>
 		<name>m17n:km:*</name>
 		<symbol>ក</symbol>
