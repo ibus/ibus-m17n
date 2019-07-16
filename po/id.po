@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Huang Peng <shawn.p.huang@gmail.com>
+# This file is distributed under the same license as the ibus-m17n package.
+# Rahman Yusri Aftian <aftian9603@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ibus-m17n 1.4.0\n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
+"POT-Creation-Date: 2018-10-24 16:26+0200\n"
+"PO-Revision-Date: 2019-07-16 13:23+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: Rahman Yusri Aftian <aftian9603@gmail.com>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: id\n"
+
+#: src/m17nutil.c:342
+msgid "M17N"
+msgstr "M17N"
+
+#: src/ibus-m17n-preferences.ui:14
+msgid "System"
+msgstr "Sistem"
+
+#: src/ibus-m17n-preferences.ui:18
+msgid "Vertical"
+msgstr "Vertikal"
+
+#: src/ibus-m17n-preferences.ui:22
+msgid "Horizontal"
+msgstr "Horisontal"
+
+#: src/ibus-m17n-preferences.ui:36
+msgid "Single"
+msgstr "Tunggal"
+
+#: src/ibus-m17n-preferences.ui:40
+msgid "Double"
+msgstr "Dobel"
+
+#: src/ibus-m17n-preferences.ui:44
+msgid "Low"
+msgstr "Lemah"
+
+#: src/ibus-m17n-preferences.ui:48
+msgid "None"
+msgstr "Tidak ada"
+
+#: src/ibus-m17n-preferences.ui:57
+msgid "Preferences"
+msgstr "Prefensi"
+
+#: src/ibus-m17n-preferences.ui:172
+msgid "Foreground: "
+msgstr "Foreground: "
+
+#: src/ibus-m17n-preferences.ui:181
+msgid "Background:"
+msgstr "Latar Belakang:"
+
+#: src/ibus-m17n-preferences.ui:196
+msgid "Underline:"
+msgstr "Garis bawah:"
+
+#: src/ibus-m17n-preferences.ui:211
+msgid "<b>Pre-edit Appearance</b>"
+msgstr "<b>Pre-edit Appearance</b>"
+
+#: src/ibus-m17n-preferences.ui:244
+msgid "Lookup Table Orientation: "
+msgstr "Orientasi Tabel Pencarian:"
+
+#: src/ibus-m17n-preferences.ui:260
+msgid "Use US keyboard layout"
+msgstr "Gunakan tata letak keyboard US"
+
+#: src/ibus-m17n-preferences.ui:280
+msgid "<b>Other</b>"
+msgstr "<b>Lain</b>"
+
+#: src/ibus-m17n-preferences.ui:299
+msgid "General"
+msgstr "Umum"
+
+#: src/ibus-m17n-preferences.ui:347
+msgid "<b>m17n-lib Configuration</b>"
+msgstr "<b>m17n-lib Konfigurasi</b>"
+
+#: src/ibus-m17n-preferences.ui:362
+msgid "Advanced"
+msgstr "lanjutan"
+
+#: src/ibus-setup-m17n.desktop.in.in:3
+msgid "IBus M17N Setup"
+msgstr "IBus M17N Setup"
+
+#: src/ibus-setup-m17n.desktop.in.in:4
+msgid "Set up IBus M17N engine"
+msgstr "Set up IBus M17N mesin"
+
+#: m17n.appdata.xml:5
+msgid "Ibus M17N"
+msgstr "Ibus M17N"
+
+#: m17n.appdata.xml:6
+msgid "M17N input engine for IBus"
+msgstr "Mesin input M17N untuk IBus"
+
+#: m17n.appdata.xml:8
+msgid ""
+"The multilingualization input method allows entering many languages using "
+"the tables from the m17n library."
+msgstr ""
+"Metode input multibahasa memungkinkan masuk banyak bahasa menggunakan "
+"tabel dari perpustakaan m17n."
