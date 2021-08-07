@@ -13,11 +13,6 @@
 		<symbol></symbol>
 	</engine>
 	<!-- Blacklist some engines -->
-	<!-- kbd engines are duplicate of xkb engines -->
-	<engine>
-		<name>m17n:*:kbd</name>
-		<rank>-1</rank>
-	</engine>
 	<!-- zh:py is superseded by ibus-pinyin etc -->
 	<engine>
 		<name>m17n:zh:py</name>
