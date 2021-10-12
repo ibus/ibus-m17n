@@ -1,0 +1,6 @@
+option('gtk',
+  type: 'combo',
+  choices: [ '2', '3', 'disable' ],
+  value: '2',
+  description: 'Choose which GTK version to build for (or to disable)',
+)
