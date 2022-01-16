@@ -236,10 +236,10 @@ ibus_m17n_engine_class_init (IBusM17NEngineClass *klass)
         "org.freedesktop.ibus.engine.m17n",
         g_strdup_printf ("/org/freedesktop/ibus/engine/m17n/%s/%s/",
                          lang, name));
-    g_free (lang);
-    g_free (name);
 
     engine_name = g_strdup_printf ("m17n:%s:%s", lang, name);
+    g_free (lang);
+    g_free (name);
     engine_config = ibus_m17n_get_engine_config (engine_name);
     g_free (engine_name);
 
