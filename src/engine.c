@@ -105,9 +105,10 @@ ibus_m17n_scan_engine_name (const gchar *engine_name,
     gchar **strv;
 
     g_return_val_if_fail (g_str_has_prefix (engine_name, "m17n:"), FALSE);
-    strv = g_strsplit (engine_name, ":", 3);
+    /* Test engine name 'm17n:lang:layout:ci' works */
+    strv = g_strsplit (engine_name, ":", -1);
 
-    if (g_strv_length (strv) != 3) {
+    if (g_strv_length (strv) < 3) {
         g_strfreev (strv);
         g_return_val_if_reached (FALSE);
     }
