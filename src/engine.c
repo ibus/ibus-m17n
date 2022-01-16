@@ -936,7 +936,12 @@ ibus_m17n_engine_callback (MInputContext *context,
     IBusM17NEngine *m17n = NULL;
 
     m17n = context->arg;
-    g_return_if_fail (m17n != NULL);
+    /* m17n always can be NULL when create_ic_for_im() calls minput_create_ic()
+     * in m17n-lib-1.8.0/src/input.c and g_return_if_fail() should not be
+     * called with CI since warnings are treated as errors.
+     */
+    if (!m17n)
+        return;
 
     /* the callback may be called in minput_create_ic, in the time
      * m17n->context has not be assigned, so need assign it. */
