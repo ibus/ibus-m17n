@@ -27,6 +27,8 @@ struct _IBusM17NEngine {
     IBusKeymap      *us_keymap;
     IBusInputPurpose purpose;
     IBusInputHints   hints;
+    IBusText *update_0_preedit_text_for_commit;
+    int update_0_preedit_pos_for_commit;
 };
 
 struct _IBusM17NEngineClass {
@@ -561,10 +563,17 @@ ibus_m17n_engine_update_preedit (IBusM17NEngine *m17n)
                                         klass->preedit_background, 0, -1);
         ibus_text_append_attribute (text, IBUS_ATTR_TYPE_UNDERLINE,
                                     klass->preedit_underline, 0, -1);
+        /* The preedit shoult not be hidden before a text is committed.
+         */
+        if (!mtext_len (m17n->context->preedit)) {
+            m17n->update_0_preedit_text_for_commit = text;
+            m17n->update_0_preedit_pos_for_commit = m17n->context->cursor_pos;
+            return;
+        }
         ibus_engine_update_preedit_text_with_mode ((IBusEngine *) m17n,
                                                    text,
                                                    m17n->context->cursor_pos,
-                                                   mtext_len (m17n->context->preedit) > 0,
+                                                   TRUE,
                                                    klass->preedit_focus_mode);
     }
     g_free (buf);
@@ -692,6 +701,20 @@ ibus_m17n_key_event_to_symbol (IBusM17NEngine *m17n,
     return mkeysym;
 }
 
+static void
+ibus_m17n_engine_left_preedit_text (IBusM17NEngine *m17n)
+{
+    IBusM17NEngineClass *klass = (IBusM17NEngineClass *) G_OBJECT_GET_CLASS (m17n);
+    if (!m17n->update_0_preedit_text_for_commit)
+        return;
+    ibus_engine_update_preedit_text_with_mode ((IBusEngine *) m17n,
+                                               m17n->update_0_preedit_text_for_commit,
+                                               m17n->update_0_preedit_pos_for_commit,
+                                               FALSE,
+                                               klass->preedit_focus_mode);
+    m17n->update_0_preedit_text_for_commit = NULL;
+}
+
 static gboolean
 ibus_m17n_engine_process_key (IBusM17NEngine *m17n,
                               MSymbol         key)
@@ -703,6 +726,7 @@ ibus_m17n_engine_process_key (IBusM17NEngine *m17n,
     retval = minput_filter (m17n->context, key, NULL);
 
     if (retval) {
+        ibus_m17n_engine_left_preedit_text (m17n);
         return TRUE;
     }
 
@@ -721,6 +745,7 @@ ibus_m17n_engine_process_key (IBusM17NEngine *m17n,
         ibus_m17n_engine_commit_string (m17n, buf);
     }
     g_free (buf);
+    ibus_m17n_engine_left_preedit_text (m17n);
 
     return retval == 0;
 }
