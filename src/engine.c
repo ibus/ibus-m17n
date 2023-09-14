@@ -747,28 +747,6 @@ ibus_m17n_engine_process_key_event (IBusEngine     *engine,
         break;
     }
 
-    /*
-      Compose support:
-
-      IBusM17NEngine inherits from
-      IBusEngineSimple. IBUS_ENGINE_CLASS(parent_class)->process_key_event()
-      calls ibus_engine_simple_process_key_event(). If this does not
-      start to process a compose sequence, it calls
-      ibus_engine_hide_preedit_text((IBusEngine *)simple) before
-      returning FALSE. If m17n->context->preedit was not empty when
-      this happens, the preedit of IBusM17NEngine disappears for a
-      very short moment until it is shown again later when
-      IBusM17NEngine continues processing the key event. This may
-      cause a flicker in the preedit.  How visible this flicker is
-      depends on the circumstances, but sometimes it can be quite
-      visible and annoying. It seems possible to avoid 99% of the
-      flicker by calling ibus_engine_show_preedit_text ((IBusEngine
-      *)m17n) directly before **and** after
-      IBUS_ENGINE_CLASS(parent_class)->process_key_event() if the
-      preedit of IBusM17NEngine is not empty.
-    */
-    if (mtext_len (m17n->context->preedit) > 0)
-        ibus_engine_show_preedit_text ((IBusEngine *)m17n);
     if (IBUS_ENGINE_CLASS (parent_class)->process_key_event (engine, keyval, keycode, modifiers)) {
         if (mtext_len (m17n->context->preedit) > 0) {
             gchar *buf;
@@ -783,8 +761,6 @@ ibus_m17n_engine_process_key_event (IBusEngine     *engine,
         }
         return TRUE;
     }
-    if (mtext_len (m17n->context->preedit) > 0)
-        ibus_engine_show_preedit_text ((IBusEngine *)m17n);
 
     if (modifiers & IBUS_RELEASE_MASK)
         return FALSE;
