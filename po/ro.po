@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Huang Peng <shawn.p.huang@gmail.com>
+# This file is distributed under the same license as the ibus-m17n package.
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: ibus-m17n 1.4.36\n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
+"POT-Creation-Date: 2025-04-07 11:01+0200\n"
+"PO-Revision-Date: 2025-05-12 17:18+0000\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
+"Language-Team: Romanian <https://translate.fedoraproject.org/projects/"
+"ibus-m17n/app/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11.3\n"
+
+#: src/m17nutil.c:351
+msgid "M17N"
+msgstr "M17N"
+
+#: src/ibus-m17n-preferences.ui:14
+msgid "System"
+msgstr "Sistem"
+
+#: src/ibus-m17n-preferences.ui:18
+msgid "Vertical"
+msgstr "Verticală"
+
+#: src/ibus-m17n-preferences.ui:22
+msgid "Horizontal"
+msgstr "Orizontală"
+
+#: src/ibus-m17n-preferences.ui:36
+msgid "Single"
+msgstr "Simplă"
+
+#: src/ibus-m17n-preferences.ui:40
+msgid "Double"
+msgstr "Dublă"
+
+#: src/ibus-m17n-preferences.ui:44
+msgid "Low"
+msgstr "Redusă"
+
+#: src/ibus-m17n-preferences.ui:48
+msgid "None"
+msgstr "Niciuna"
+
+#: src/ibus-m17n-preferences.ui:57
+msgid "Preferences"
+msgstr "Preferințe"
+
+#: src/ibus-m17n-preferences.ui:172
+msgid "Foreground:"
+msgstr "Prim plan:"
+
+#: src/ibus-m17n-preferences.ui:181
+msgid "Background:"
+msgstr "Fundal:"
+
+#: src/ibus-m17n-preferences.ui:196
+msgid "Underline:"
+msgstr "Subliniere:"
+
+#: src/ibus-m17n-preferences.ui:211
+msgid "<b>Pre-edit Appearance</b>"
+msgstr "<b>Pre-editare aspect</b>"
+
+#: src/ibus-m17n-preferences.ui:244
+msgid "Lookup Table Orientation:"
+msgstr "Orientarea tabelului de căutare:"
+
+#: src/ibus-m17n-preferences.ui:260
+msgid "Use US keyboard layout"
+msgstr "Utilizați aranjamentul de tastatură din SUA"
+
+#: src/ibus-m17n-preferences.ui:280
+msgid "<b>Other</b>"
+msgstr "<b>Alta</b>"
+
+#: src/ibus-m17n-preferences.ui:299
+msgid "General"
+msgstr "General"
+
+#: src/ibus-m17n-preferences.ui:347
+msgid "<b>m17n-lib Configuration</b>"
+msgstr "<b>Configurare m17n-lib</b>"
+
+#: src/ibus-m17n-preferences.ui:362
+msgid "Advanced"
+msgstr "Avansat"
+
+#: src/ibus-setup-m17n.desktop.in.in:3
+msgid "IBus M17N Setup"
+msgstr "Configurare IBus M17N"
+
+#: src/ibus-setup-m17n.desktop.in.in:4
+msgid "Set up IBus M17N engine"
+msgstr "Configurarea motorului IBus M17N"
+
+#: org.freedesktop.ibus.engine.m17n.metainfo.xml.in:6
+msgid "Ibus M17N"
+msgstr "Ibus M17N"
+
+#: org.freedesktop.ibus.engine.m17n.metainfo.xml.in:7
+msgid "M17N input engine for IBus"
+msgstr "Motor de intrare M17N pentru IBus"
+
+#: org.freedesktop.ibus.engine.m17n.metainfo.xml.in:9
+msgid ""
+"This multilingualization input method allows entering many languages using "
+"the input methods from the m17n library."
+msgstr ""
+"Această metodă de intrare multilingvă permite introducerea mai multor limbi "
+"utilizând metodele de intrare din biblioteca m17n."
