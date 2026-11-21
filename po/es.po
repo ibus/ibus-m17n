@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ibus-m17n 1.4.1\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2026-06-23 10:58+0200\n"
+"POT-Creation-Date: 2026-10-27 19:38+0100\n"
 "PO-Revision-Date: 2025-12-30 16:45+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15.1\n"
 
-#: src/m17nutil.c:351
+#: src/m17nutil.c:363
 msgid "M17N"
 msgstr "M17N"
 
